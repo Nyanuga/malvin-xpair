@@ -143,12 +143,12 @@
         <div id="text">
           <i class="fa fa-user"></i>
           <p>
-            <h3 class="centered-text">MALVIN-XPAIR</h3>
+            <h3 class="centered-text">PRINCE JUNIOR V2</h3>
             <br>
-            <h6>Made by Malvin</h6>
+            <h6>Made by Junior Ezed</h6>
             <h6>Enter Your Number with Country Code.</h6>
             <div class="input-container">
-              <input placeholder="2637134xxx" type="number" id="number" placeholder="Enter your Phone Pumber with Country Code" name="">
+              <input placeholder="254723245807" type="number" id="number" placeholder="Enter your Phone Pumber with Country Code" name="">
               <button id="submit">REQUEST CODE</button>
             </div>
             
@@ -189,10 +189,10 @@
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
         a.innerHTML = '<a style="color:green;font-weight:bold">Invalid Number</a><br><br>';
       } else {
-        const Malvin_Tech = c.value.replace(/[^0-9]/g, "");
+        const Prince_Junior_Tech = c.value.replace(/[^0-9]/g, "");
         let bb = "";
         let bbc = "";
-        const cc = Malvin_Tech.split('');
+        const cc = Prince_Junior_Tech.split('');
         cc.map(a => {
           bbc += a;
           if (bbc.length == 3) {
@@ -207,7 +207,7 @@
         c.value = "+" + bb;
         c.style = "color:black;font-size:20px";
         a.innerHTML = '<a style="color:white;font-weight:bold">Please Wait...</a><br><br>';
-        let { data } = await axios(`/code?number=${Malvin_Tech}`);
+        let { data } = await axios(`/code?number=${Prince_Junior_Tech}`);
         let code = data.code || "Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
       }
