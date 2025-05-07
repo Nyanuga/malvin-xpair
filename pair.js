@@ -20,13 +20,13 @@ function removeFile(FilePath){
 router.get('/', async (req, res) => {
     const id = makeid();
     let num = req.query.number;
-        async function MALVIN_XD_PAIR_CODE() {
+        async function PRINCE__JUNIOR_V2_PAIR_CODE() {
         const {
             state,
             saveCreds
         } = await useMultiFileAuthState('./temp/'+id)
      try {
-            let Pair_Code_By_Malvin_Tech = Malvin_Tech({
+            let Pair_Code_By_Prince_Junuor_Tech = Malvin_Tech({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
@@ -35,16 +35,16 @@ router.get('/', async (req, res) => {
                 logger: pino({level: "fatal"}).child({level: "fatal"}),
                 browser: ["Chrome (Ubuntu)", "Chrome (Linux)", "Chrome (MacOs)"]
              });
-             if(!Pair_Code_By_Malvin_Tech.authState.creds.registered) {
+             if(!Pair_Code_By_Prince_Junuor_Tech.authState.creds.registered) {
                 await delay(1500);
                         num = num.replace(/[^0-9]/g,'');
-                            const code = await Pair_Code_By_Malvin_Tech.requestPairingCode(num)
+                            const code = await Pair_Code_By_Prince_Junuor_Tech.requestPairingCode(num)
                  if(!res.headersSent){
                  await res.send({code});
                      }
                  }
-            Pair_Code_By_Malvin_Tech.ev.on('creds.update', saveCreds)
-            Pair_Code_By_Malvin_Tech.ev.on("connection.update", async (s) => {
+            Pair_Code_By_Prince_Junuor_Tech.ev.on('creds.update', saveCreds)
+            Pair_Code_By_Prince_Junuor_Tech.ev.on("connection.update", async (s) => {
                 const {
                     connection,
                     lastDisconnect
@@ -54,10 +54,10 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
                let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Malvin_Tech.sendMessage(Pair_Code_By_Malvin_Tech.user.id, { text: 'Malvin~' + b64data });
+               let session = await Pair_Code_By_Prince_Junuor_Tech.sendMessage(Pair_Code_By_Malvin_Tech.user.id, { text: 'Malvin~' + b64data });
 
-               let MALVIN_XD_TEXT = `
-      MALVIN-XD V4 Sucess Scan Session 
+               let PRINCE_JUNIOR_V2_TEXT = `
+      PRINCE JUNIOR V2 V4 Sucess Scan Session 
 
 > Bot repo: Https://GitHub.com/XdKing2/MALVIN-XD 
 
