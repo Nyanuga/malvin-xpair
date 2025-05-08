@@ -57,13 +57,13 @@ router.get('/', async (req, res) => {
                let session = await Pair_Code_By_Prince_Junuor_Tech.sendMessage(Pair_Code_By_Malvin_Tech.user.id, { text: 'Malvin~' + b64data });
 
                let PRINCE_JUNIOR_V2_TEXT = `
-      PRINCE JUNIOR V2 V4 Sucess Scan Session 
+      PRINCE JUNIOR V2 Sucess Scan Session 
 
 > Bot repo: Https://GitHub.com/XdKing2/MALVIN-XD 
 
-> Owner: *Malvin King*
+> Owner: *Junior Ezed*
 
-> BotName: *MALVIN XD* 
+> BotName: *PRINCE JUNIOR V2* 
 
 
 
@@ -73,16 +73,16 @@ https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A
 
 > _Regards Malvin King_`
 
- await Pair_Code_By_Malvin_Tech.sendMessage(Pair_Code_By_Malvin_Tech.user.id,{text:MALVIN_XD_TEXT},{quoted:session})
+ await Pair_Code_By_Prince_Junuor_Tech.sendMessage(Pair_Code_By_Prince_Junuor_Tech,{text: PRINCE_JUNIOR_V2_TEXT},{quoted:session})
  
 
         await delay(100);
-        await Pair_Code_By_Malvin_Tech.ws.close();
+        await Pair_Code_By_Prince_Junuor_Tech.ws.close();
         await removeFile('./temp/'+id);
    require('child_process').exec('pm2 restart PAIR');
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    MALVIN_XD_PAIR_CODE();
+                    PRINCE_JUNIOR_V2_PAIR_CODE();
                 }
             });
         } catch (err) {
@@ -93,6 +93,6 @@ https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A
          }
         }
     }
-    return await MALVIN_XD_PAIR_CODE()
+    return await PRINCE_JUNIOR_V2_PAIR_CODE()
 });
 module.exports = router
