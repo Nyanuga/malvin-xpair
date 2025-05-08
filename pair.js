@@ -6,7 +6,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: Malvin_Tech,
+    default: Prince_Junior_Tech,
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
             saveCreds
         } = await useMultiFileAuthState('./temp/'+id)
      try {
-            let Pair_Code_By_Prince_Junuor_Tech = Malvin_Tech({
+            let Pair_Code_By_Prince_Junuor_Tech = Prince_Junior_Tech({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
@@ -59,7 +59,7 @@ router.get('/', async (req, res) => {
                let PRINCE_JUNIOR_V2_TEXT = `
       PRINCE JUNIOR V2 Sucess Scan Session 
 
-> Bot repo: Https://GitHub.com/XdKing2/MALVIN-XD 
+> Bot repo: https://github.com/Nyanuga/Prince-junior-v2 
 
 > Owner: *Junior Ezed*
 
@@ -68,10 +68,9 @@ router.get('/', async (req, res) => {
 
 
 *Follow support for updates*
-https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A
+https://whatsapp.com/channel/0029VaDK8ZUDjiOhwFS1cP2j_
 
-
-> _Regards Malvin King_`
+> _Regards Junior Ezed_`
 
  await Pair_Code_By_Prince_Junuor_Tech.sendMessage(Pair_Code_By_Prince_Junuor_Tech,{text: PRINCE_JUNIOR_V2_TEXT},{quoted:session})
  
