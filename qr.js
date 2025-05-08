@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Malvin_Tech,
+	default: PRINCE_JUNIOR_TECH,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -28,13 +28,13 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function MALVIN_XD_QR_CODE() {
+	async function PRINCE_JUNIOR_V2_QR_CODE() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Malvin_Tech = Malvin_Tech({
+			let Qr_Code_By_Prince_Junior_Tech = Malvin_Tech({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
 				browser: Browsers.macOS("Desktop"),
 			});
 
-			Qr_Code_By_Malvin_Tech.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Malvin_Tech.ev.on("connection.update", async (s) => {
+			Qr_Code_By_Prince_Junior_Tech.ev.on('creds.update', saveCreds)
+			Qr_Code_By_Prince_Junior_Tech.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -56,34 +56,34 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Malvin_Tech.sendMessage(Qr_Code_By_Malvin_Tech.user.id, { text: '' + b64data });
+				   let session = await Qr_Code_By_Prince_Junior_Tech.sendMessage(Qr_Code_By_Prince_Junior_Tech.user.id, { text: '' + b64data });
 	
-				   let MALVIN_KING_TEXT = `
-MALVIN-XD V4 Sucess Scan Session 
+				   let PRINCE_JUNIOR_V2_TEXT = `
+PRINCE JUNIOR V2 Sucess Scan Session 
 
-> Bot repo: Https://GitHub.com/XdKing2/MALVIN-XD 
+> Bot repo: https://github.com/Nyanuga/Prince-junior-v2 
 
-> Owner: *Malvin King*
+> Owner: *Junior Ezed*
 
-> BotName: *MALVIN XD* 
+> BotName: *PRINCE JUNIOR V2* 
 
 
 
 *Follow support for updates*
-https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A
+https://whatsapp.com/channel/0029VaDK8ZUDjiOhwFS1cP2j_
 
 
-> _Regards Malvin King_ `
-	 await Qr_Code_By_Malvin_Tech.sendMessage(Qr_Code_By_Malvin_Tech.user.id,{text:MALVIN_KING_TEXT},{quoted:session})
+> _Regards Junior Ezed_ `
+	 await Qr_Code_By_Prince_Junior_Tech.sendMessage(Qr_Code_By_Prince_Junior_Tech.user.id,{text: PRINCE_JUNIOR_V2_TEXT},{quoted:session})
 
 
 
 					await delay(100);
-					await Qr_Code_By_Malvin_Tech.ws.close();
+					await Qr_Code_By_Prince_Junior_Tech.ws.close();
 					return await removeFile("temp/" + id);
 				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 					await delay(10000);
-					MALVIN_XD_QR_CODE();
+					PRINCE_JUNIOR_V2_QR_CODE();
 				}
 			});
 		} catch (err) {
@@ -96,6 +96,6 @@ https://whatsapp.com/channel/0029VbA6MSYJUM2TVOzCSb2A
 			await removeFile("temp/" + id);
 		}
 	}
-	return await MALVIN_XD_QR_CODE()
+	return await PRINCE_JUNIOR_V2_QR_CODE()
 });
 module.exports = router
