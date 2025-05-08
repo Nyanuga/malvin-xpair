@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: malvin-xpair
+    name: Prince-Junior
     build:
       command: npm install && npm run build
     start:
